@@ -45,7 +45,7 @@
 #define LV_FONT_MONTSERRAT_46 0
 #define LV_FONT_MONTSERRAT_48 0
 
-/* Always set a default font to prevent crashes if a widget lacks styling */
+/* Set a default font to prevent crashes if a widget lacks styling */
 #define LV_FONT_DEFAULT &lv_font_montserrat_16
 
 /*=========================
@@ -59,7 +59,7 @@
 /*=======================
    FEATURE CONFIGURATION
  *=======================*/
-/* Enable the core widgets we are using in the UI */
+/* Enable the core widgets used in the UI */
 #define LV_USE_ARC        1
 #define LV_USE_LABEL      1
 #define LV_USE_TABVIEW    1
