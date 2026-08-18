@@ -8,8 +8,8 @@ A custom-built, multi-threaded environmental dashboard that merges highly accura
 I wanted a reliable, local air quality monitor that didn't rely on closed commercial ecosystems. This project bridges the gap between low-level hardware design (soldering, power delivery) and embedded software engineering (multithreading, I2C/SPI protocols, and UI rendering).
 
 ## ⚡ Features
-* **Real-Time IAQ Tracking:** Measures VOCs, Temperature, and Humidity via a Bosch BME680 sensor.
-* **Live Weather Integration:** Fetches current conditions and hourly forecasts via the Open-Meteo REST API.
+* **Real-Time IAQ Tracking:** Measures VOCs, Temperature, Barometric Pressure, and Humidity via a Bosch BME680 sensor.
+* **Live Weather Integration:** Fetches current conditions and hourly forecasts via the Open-Meteo API.
 * **Dual-Core Processing:** Utilizes FreeRTOS to pin heavy network/sensor tasks to Core 0, keeping the LVGL graphics engine running unhindered at maximum framerate on Core 1.
 * **Hardware Interrupts:** Physical tactile button for instant UI tab switching, bypassing software delays.
 
