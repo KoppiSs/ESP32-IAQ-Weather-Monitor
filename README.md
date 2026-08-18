@@ -40,11 +40,11 @@ Building this from scratch presented several hardware and software challenges th
 **1. Mutex Contention & UI Freezing**
 * **Issue:** Initially, the UI interactions felt sluggish.
 * **Diagnosis:** Core 0 was struggling to update the UI based on user feedback while waiting for the Wi-Fi weather API response and the continuous BME680 sensor readings.
-* **Solution:** Set up a dual-core system (Core 0 Network/Sensor, Core 1 UI/LVGL). Refactored the network task to fetch data into local variables *first*, only locking the Mutex for ~1 microsecond to copy the final data over. The UI is now instantly responsive.
+* **Solution:** Set up a dual-core system (Core 0 API/Sensor, Core 1 UI/LVGL). Refactored task scheduling and used Mutex semaphores. The UI is now instantly responsive.
 
 **2. Power Delivery & Signal Integrity**
 * **Issue:** Moving from the breadboard to the soldered perfboard resulted in a dark screen, despite successful touch inputs.
-* **Diagnosis:** Used a multimeter to track voltage drops and resistance across the custom copper rails, identifying a cold solder joint on the main GND rail that was choking the 80mA required for the backlight.
+* **Diagnosis:** Used a multimeter to track voltage drops and resistance across the custom copper rails, identifying a cold solder joint on the main GND rail that was choking the power required for the backlight.
 * **Solution:** Reflowed the main power rails for solid current delivery. Additionally, I daisy-chained the shared SPI bus lines (MOSI/SCK) between the high-speed display and low-speed touch components to maintain signal integrity and prevent echoing.
 
 ---
