@@ -38,9 +38,9 @@ I wanted a reliable, local air quality monitor that didn't rely on closed commer
 Building this from scratch presented several hardware and software challenges that required active debugging:
 
 **1. Mutex Contention & UI Freezing**
-* **Issue:** Initially, the physical UI button felt sluggish. 
-* **Diagnosis:** Core 0 was locking the shared data Mutex while waiting 2-3 seconds for the Wi-Fi weather API response and the BME680 sensor readings. When the hardware interrupt triggered, Core 1 was forced to wait for the Mutex to unlock before redrawing the screen.
-* **Solution:** Refactored the network task to fetch data into local variables *first*, only locking the Mutex for ~1 microsecond to copy the final data over. The UI is now instantly responsive.
+* **Issue:** Initially, the UI interactions felt sluggish.
+* **Diagnosis:** Core 0 was struggling to update the UI based on user feedback while waiting for the Wi-Fi weather API response and the continuous BME680 sensor readings.
+* **Solution:** Set up a dual-core system (Core 0 Network/Sensor, Core 1 UI/LVGL). Refactored the network task to fetch data into local variables *first*, only locking the Mutex for ~1 microsecond to copy the final data over. The UI is now instantly responsive.
 
 **2. Power Delivery & Signal Integrity**
 * **Issue:** Moving from the breadboard to the soldered perfboard resulted in a dark screen, despite successful touch inputs.
