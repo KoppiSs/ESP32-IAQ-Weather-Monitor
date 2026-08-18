@@ -106,7 +106,7 @@ void TaskUI(void *pvParameters) {
             lastUIUpdate = millis(); // Reset the UI timer
         }
 
-        // TASK 5: The LVGL Heartbeat (Runs at maximum speed unhindered!)
+        // TASK 5: The LVGL Heartbeat
         lv_timer_handler();  
 
         // Yield the core for 5ms
