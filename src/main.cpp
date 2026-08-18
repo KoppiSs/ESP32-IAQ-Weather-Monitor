@@ -13,7 +13,7 @@ extern lv_obj_t * tabview;
 IndoorData currentIndoor;
 WeatherData currentOutdoor;
 
-// 2. The Mutex (Our Data Lock)
+// 2. The Mutex
 SemaphoreHandle_t dataMutex;
 
 // 3. Button Interrupt Variables
