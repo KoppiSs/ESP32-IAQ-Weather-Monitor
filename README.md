@@ -1,6 +1,6 @@
 # 🌍 Dual-Core ESP32 IAQ & Weather Dashboard
 
-<img width="4624" height="3468" alt="20260818_174405" src="https://github.com/user-attachments/assets/689c4f44-4fb4-43fe-952b-f6ec5833952e" />
+<img width="800" height="450" alt="UIshowcase-optimized" src="https://github.com/user-attachments/assets/3fe5665f-257e-4bcc-98a6-26ae885cf0c6" />
 
 A custom-built, multi-threaded environmental dashboard that merges highly accurate indoor air quality (IAQ) metrics with live API weather forecasts. Built on an ESP32 using FreeRTOS for task scheduling and LVGL for a responsive, hardware-accelerated user interface.
 
