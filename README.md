@@ -23,8 +23,7 @@ I wanted a reliable, local air quality monitor that didn't rely on closed commer
 * **Display:** 3.5" SPI TFT LCD with Touch Controller
 * **Power Delivery:** Custom perfboard motherboard with dedicated 3.3V and GND copper rails.
 
-<img width="3468" height="4624" alt="20260810_203104" src="https://github.com/user-attachments/assets/7503be4b-78ef-4844-92d8-8f7b60bedbc1" />
-<img width="3468" height="4624" alt="20260814_165034" src="https://github.com/user-attachments/assets/f2a55c66-b4bf-46c3-9b23-21617903e0c4" />
+<img width="3468" height="4624" alt="20260814_165034" src="https://github.com/user-attachments/assets/f2a55c66-b4bf-46c3-9b23-21617903e0c4" /><img width="3468" height="4624" alt="20260810_203104" src="https://github.com/user-attachments/assets/7503be4b-78ef-4844-92d8-8f7b60bedbc1" />
 
 
 ### Software Stack
