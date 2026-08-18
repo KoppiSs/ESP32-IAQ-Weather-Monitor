@@ -29,7 +29,7 @@ I wanted a reliable, local air quality monitor that didn't rely on closed commer
 * **C++ / PlatformIO**
 * **FreeRTOS** (Task scheduling & Mutex semaphores)
 * **LVGL** (Light and Versatile Graphics Library)
-* **BSEC Library** (Bosch Sensortec Environmental Cluster for VOC calculation and thermal offsets)
+* **BSEC Library** (Bosch Sensortec Environmental Cluster for VOC calculation)
 
 ---
 
