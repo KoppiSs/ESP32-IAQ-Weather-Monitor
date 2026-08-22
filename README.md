@@ -1,4 +1,4 @@
-# 🌍 Dual-Core ESP32 IAQ & Weather Dashboard
+# Dual-Core ESP32 IAQ & Weather Dashboard
 
 <img width="800" height="450" alt="UIshowcase-optimized" src="https://github.com/user-attachments/assets/3fe5665f-257e-4bcc-98a6-26ae885cf0c6" />
 
