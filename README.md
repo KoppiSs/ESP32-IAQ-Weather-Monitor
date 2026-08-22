@@ -40,7 +40,7 @@ Building this from scratch presented several hardware and software challenges th
 **1. Mutex Contention & UI Freezing**
 * **Issue:** Initially, the UI interactions felt sluggish.
 * **Diagnosis:** Core 0 was struggling to update the UI based on user feedback while waiting for the Wi-Fi weather API response and the continuous BME680 sensor readings.
-* **Solution:** Set up a dual-core system (Core 0 API/Sensor, Core 1 UI/LVGL). Refactored task scheduling and used Mutex semaphores. The UI is now instantly responsive.
+* **Solution:** Set up a dual-core system (Core 0 API/Sensor, Core 1 UI/LVGL). Refactored task scheduling and utilized Mutex semaphores. The UI is now instantly responsive.
 
 **2. Power Delivery & Signal Integrity**
 * **Issue:** Moving from the breadboard to the soldered perfboard resulted in a dark screen, despite successful touch inputs.
@@ -52,7 +52,7 @@ Building this from scratch presented several hardware and software challenges th
 ## ⚙️ How to Build & Flash
 
 1. Clone this repository.
-2. Uncomment the WiFi credentials template at the top of weather.cpp. Remember to remove the #include "secrets.h" line too.
+2. Uncomment the Wi-Fi credentials template at the top of weather.cpp. Remember to remove the #include "secrets.h" line too.
 3. Add your 2.4GHz Wi-Fi credentials to the template.
 4. Build and upload using PlatformIO.
 
